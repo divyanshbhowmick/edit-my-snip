@@ -18,7 +18,6 @@ const ContentView: React.FC<ContentViewProps> = ({
 		sendResponse({
 			data: { code: selectedText, language }
 		});
-		unmountComponentAtNode(document.getElementById(domContainerID));
 		removeContainer(document.body);
 	};
 	return <LanguageSelectComponent setLanguage={setLanguage} />;

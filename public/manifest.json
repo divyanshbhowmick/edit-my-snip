@@ -13,6 +13,15 @@
 			"css": ["content.css"]
 		}
 	],
-	"web_accessible_resources": ["content.css"],
-	"permissions": ["contextMenus", "tabs"]
+	"web_accessible_resources": [
+		"content.css",
+		"fonts/EuclidCircularA-Regular.ttf",
+		"fonts/*.woff2"
+	],
+	"permissions": [
+		"contextMenus",
+		"tabs",
+		"http://fonts.googleapis.com/",
+		"https://fonts.googleapis.com/"
+	]
 }

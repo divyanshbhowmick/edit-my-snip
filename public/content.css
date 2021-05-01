@@ -1,3 +1,19 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@300&display=swap");
+
+@font-face {
+	font-family: "euclidCircularA";
+	font-style: normal;
+	font-weight: 400;
+	src: url("chrome-extension://__MSG_@@extension_id__/fonts/EuclidCircularA-Regular.ttf");
+}
+@font-face {
+	font-family: "Nunito";
+	font-style: normal;
+	font-weight: 300;
+	font-display: swap;
+	src: url("chrome-extension://__MSG_@@extension_id__/fonts/Nunito.woff")
+		format("woff");
+}
 .card__container {
 	display: flex;
 	flex-direction: column;
@@ -11,8 +27,20 @@
 	background-color: #fff;
 }
 
-.card__heading {
-	text-align: center;
+.card__header {
+	display: flex;
+	justify-content: center;
+}
+
+.card__close__icon {
+	align-self: flex-end;
+	cursor: pointer;
+	text-shadow: 10px 10px 10px gray;
+}
+
+.card__header__title {
+	font-family: "euclidCircularA", "Nunito", sans-serif;
+	font-size: 16px;
 }
 .selectbox {
 	box-shadow: 0 5px 10px rgba(154, 160, 185, 0.05),
@@ -20,6 +48,7 @@
 	cursor: pointer;
 	outline: none;
 	width: 170px;
+	height: 25px;
 	margin-top: 30px;
 }
 

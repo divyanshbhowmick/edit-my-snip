@@ -14,6 +14,23 @@ const generateConfig = (editorConfig: IEditorConfig) => {
 					"index.js": { ...baseConfig.files["index.js"], content }
 				}
 			};
+		case Languages.ReactJS:
+			return {
+				...baseConfig,
+				files: {
+					...baseConfig.files,
+					"index.js": { ...baseConfig.files["index.js"], content },
+					"package.json": {
+						...baseConfig.files["index.js"],
+						content: JSON.stringify({
+							dependencies: {
+								react: "^17.0.2",
+								"react-dom": "^17.0.2"
+							}
+						})
+					}
+				}
+			};
 		default:
 			return baseConfig;
 	}

@@ -1,6 +1,9 @@
 import React from "react";
 import "./LanguageSelector.css";
 import { languagesSupported } from "./../../config/languageConfig";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { removeContainer } from "./../../helpers/contentScriptHelper";
+import { faTimes } from "@fortawesome/free-solid-svg-icons";
 
 interface LanguageSelectorProps {
 	setLanguage: Function;
@@ -11,15 +14,30 @@ const LanguageSelector: React.FC<LanguageSelectorProps> = ({ setLanguage }) => {
 	) => {
 		setLanguage(+event.target.value);
 	};
+
+	const handleClose = () => {
+		removeContainer(document.body);
+	};
 	return (
 		<div className="card__container">
-			<div className="card__heading">Edit My Snip!</div>
+			<FontAwesomeIcon
+				className="card__close__icon"
+				icon={faTimes}
+				onClick={handleClose}
+			/>
+			<div className="card__header">
+				<div className="card__header__title">Edit(✏) My Snip(👩‍💻)</div>
+			</div>
 			<select className="selectbox" onChange={handleLanguageSelect}>
 				<option value="vanillaJS" className="selectbox__option">
 					Choose the language
 				</option>
 				{languagesSupported.map((language) => (
-					<option value={language?.id} className="selectbox__option">
+					<option
+						key={language?.id}
+						value={language?.id}
+						className="selectbox__option"
+					>
 						{language.name}
 					</option>
 				))}

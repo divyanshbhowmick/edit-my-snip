@@ -2,8 +2,6 @@ import {
 	CONTEXT_MENU_ID,
 	CONTEXT_MENU_TITLE,
 	CONTEXT_MENU_CONTEXTS,
-	SERVER_URL,
-	GENERATE_LINK_ENDPOINT,
 	FETCH_SELECTION_TEXT
 } from "./../helpers/constants";
 import { handleContentScriptResponse } from "./../helpers/backgroundHelper";
@@ -13,7 +11,7 @@ const contextMenuItems = {
 	contexts: CONTEXT_MENU_CONTEXTS
 };
 
-const handleContextMenuClick = (clickData) => {
+const handleContextMenuClick = (clickData: chrome.contextMenus.OnClickData) => {
 	let { menuItemId, selectionText } = clickData;
 	if (menuItemId === CONTEXT_MENU_ID && selectionText) notifyContentScript();
 	else if (menuItemId === CONTEXT_MENU_ID)
