@@ -1,0 +1,28 @@
+.card__container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	height: 200px;
+	width: 230px;
+	border-radius: 30px;
+	box-shadow: 0 5px 10px rgba(154, 160, 185, 0.05),
+		0 15px 40px rgba(166, 173, 201, 0.2);
+	padding: 20px;
+	background-color: #fff;
+}
+
+.card__heading {
+	text-align: center;
+}
+.selectbox {
+	box-shadow: 0 5px 10px rgba(154, 160, 185, 0.05),
+		0 15px 40px rgba(166, 173, 201, 0.2);
+	cursor: pointer;
+	outline: none;
+	width: 170px;
+	margin-top: 30px;
+}
+
+.selectbox__option {
+	background-color: #fff;
+}
