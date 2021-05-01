@@ -9,7 +9,7 @@ const LanguageSelector: React.FC<LanguageSelectorProps> = ({ setLanguage }) => {
 	const handleLanguageSelect = (
 		event: React.ChangeEvent<HTMLSelectElement>
 	) => {
-		setLanguage(event.target.value);
+		setLanguage(+event.target.value);
 	};
 	return (
 		<div className="card__container">
