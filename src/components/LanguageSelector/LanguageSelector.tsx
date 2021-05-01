@@ -14,12 +14,7 @@ const LanguageSelector: React.FC<LanguageSelectorProps> = ({ setLanguage }) => {
 	return (
 		<div className="card__container">
 			<div className="card__heading">Edit My Snip!</div>
-			<select
-				name="pets"
-				id="pet-select"
-				className="selectbox"
-				onChange={handleLanguageSelect}
-			>
+			<select className="selectbox" onChange={handleLanguageSelect}>
 				<option value="vanillaJS" className="selectbox__option">
 					Choose the language
 				</option>
