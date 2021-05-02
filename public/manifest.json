@@ -3,12 +3,17 @@
 	"name": "edit my snip",
 	"version": "1.0",
 	"description": "A browser extension to easily provide an editor with the selected snippet of code, ready to execute and debug.",
+	"icons": {
+		"128": "./assets/icons/icon128.png",
+		"32": "./assets/icons/icon32.png",
+		"16": "./assets/icons/icon16.png"
+	},
 	"background": {
 		"scripts": ["background.js"]
 	},
 	"content_scripts": [
 		{
-			"matches": ["<all_urls>"],
+			"matches": ["http://*/*", "https://*/*"],
 			"js": ["content.js"],
 			"css": ["content.css"]
 		}
@@ -16,12 +21,8 @@
 	"web_accessible_resources": [
 		"content.css",
 		"fonts/EuclidCircularA-Regular.ttf",
-		"fonts/*.woff2"
+		"fonts/*.woff2",
+		"fonts/*.woff"
 	],
-	"permissions": [
-		"contextMenus",
-		"tabs",
-		"http://fonts.googleapis.com/",
-		"https://fonts.googleapis.com/"
-	]
+	"permissions": ["contextMenus", "tabs"]
 }

@@ -14,7 +14,6 @@ const ContentView: React.FC<ContentViewProps> = ({
 	selectedText
 }) => {
 	const setLanguage = (language: Languages) => {
-		console.log("Sending Response");
 		sendResponse({
 			data: { code: selectedText, language }
 		});

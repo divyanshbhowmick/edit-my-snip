@@ -20,7 +20,6 @@ const handleContextMenuClick = (clickData: chrome.contextMenus.OnClickData) => {
 
 const notifyContentScript = () => {
 	chrome.tabs.query({ active: true, currentWindow: true }, function (tabs) {
-		console.log("Tabs", tabs);
 		chrome.tabs.sendMessage(
 			tabs[0].id,
 			{
