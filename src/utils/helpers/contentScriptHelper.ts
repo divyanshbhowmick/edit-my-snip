@@ -18,11 +18,14 @@ export const getParentElement = (): HTMLElement => {
 export const createContainerToRender = (parentElement: HTMLElement) => {
 	const containerElement: HTMLElement = document.createElement("div");
 	containerElement.id = DOM_CONTAINER_ID;
-	containerElement.style.position = `absolute`;
-	containerElement.style.top = `${parentElement.offsetTop}px`;
-	containerElement.style.left = `${
-		parentElement.offsetWidth + parentElement.offsetLeft
+	containerElement.style.position = `fixed`;
+	containerElement.style.top = `${
+		parentElement.getBoundingClientRect().top
 	}px`;
+	containerElement.style.left = `${
+		parentElement.getBoundingClientRect().left
+	}px`;
+	containerElement.style.zIndex = `100000000`;
 	console.log("offsetLeft", parentElement.offsetLeft);
 	console.log("offsetTop", parentElement.offsetTop);
 	console.log("offsetWidth", parentElement.offsetWidth);
@@ -32,6 +35,7 @@ export const createContainerToRender = (parentElement: HTMLElement) => {
 		"ContainerLeft",
 		parentElement.offsetWidth + parentElement.offsetLeft
 	);
+	console.log(parentElement.getBoundingClientRect());
 	document.body.appendChild(containerElement);
 
 	// parentElement.insertAdjacentElement("afterbegin", containerElement);

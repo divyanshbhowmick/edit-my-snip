@@ -16,6 +16,7 @@
 		0 15px 40px rgba(166, 173, 201, 0.2);
 	padding: 20px;
 	background-color: #fff;
+	animation: popup 0.4s ease-in;
 }
 
 .card__header {
@@ -39,10 +40,27 @@
 	cursor: pointer;
 	outline: none;
 	width: 170px;
-	height: 25px;
+	height: fit-content;
 	margin-top: 30px;
+	font-family: "euclidCircularA", "Nunito", sans-serif;
+	font-size: 14px;
+	border-radius: 30px;
 }
 
 .selectbox__option {
+	font-family: "euclidCircularA", "Nunito", sans-serif;
+	font-size: 14px;
 	background-color: #fff;
+}
+
+@keyframes popup {
+	0% {
+		opacity: 0;
+		transform: scale(0);
+	}
+
+	100% {
+		opacity: 1;
+		transform: scale(1);
+	}
 }

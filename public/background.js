@@ -707,8 +707,9 @@ var isCodeSnippet = function (code) {
     // Check for basic keywords and syntax
     var count = 0;
     JS_KEYWORDS.map(function (keyword) {
-        if (code.includes(keyword))
+        if (code.includes(keyword)) {
             count++;
+        }
     });
     return count >= 4;
 };
@@ -716,8 +717,7 @@ var sanitizeCode = function (editorConfig) {
     var sanitizedCode = __assign({}, editorConfig);
     if ((editorConfig === null || editorConfig === void 0 ? void 0 : editorConfig.language) == Languages.ReactJS) {
         if (editorConfig === null || editorConfig === void 0 ? void 0 : editorConfig.content) {
-            Object.entries(REACT_IMPORTS).forEach(function (_a) {
-                _a[0]; var importValue = _a[1];
+            Object.values(REACT_IMPORTS).forEach(function (importValue) {
                 var count = 0;
                 importValue.forEach(function (value) {
                     if (editorConfig === null || editorConfig === void 0 ? void 0 : editorConfig.content.includes(value))

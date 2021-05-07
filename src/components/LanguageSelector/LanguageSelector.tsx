@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./LanguageSelector.css";
 import { languagesSupported } from "./../../config/languageConfig";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -18,6 +18,20 @@ const LanguageSelector: React.FC<LanguageSelectorProps> = ({ setLanguage }) => {
 	const handleClose = () => {
 		removeContainer(document.body);
 	};
+
+	const handleKeyPress = (event: KeyboardEvent) => {
+		if (event.key === "Escape") {
+			handleClose();
+		}
+	};
+
+	useEffect(() => {
+		document.addEventListener("keydown", handleKeyPress);
+		return () => {
+			document.removeEventListener("keydown", handleKeyPress);
+		};
+	});
+
 	return (
 		<div className="card__container">
 			<FontAwesomeIcon
