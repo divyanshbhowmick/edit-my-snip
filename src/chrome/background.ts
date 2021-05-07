@@ -3,8 +3,10 @@ import {
 	CONTEXT_MENU_TITLE,
 	CONTEXT_MENU_CONTEXTS,
 	FETCH_SELECTION_TEXT
-} from "./../helpers/constants";
-import { handleContentScriptResponse } from "./../helpers/backgroundHelper";
+} from "../utils/helpers/constants";
+import { handleContentScriptResponse } from "../utils/helpers/backgroundHelper";
+import { notifyContentScriptData } from "./../actions/actions";
+import { IAction } from "../@types/config";
 const contextMenuItems = {
 	id: CONTEXT_MENU_ID,
 	title: CONTEXT_MENU_TITLE,
@@ -20,12 +22,11 @@ const handleContextMenuClick = (clickData: chrome.contextMenus.OnClickData) => {
 
 const notifyContentScript = () => {
 	chrome.tabs.query({ active: true, currentWindow: true }, function (tabs) {
+		const currentTabId: number = tabs[0].id;
+		const message: IAction = notifyContentScriptData("");
 		chrome.tabs.sendMessage(
-			tabs[0].id,
-			{
-				action: FETCH_SELECTION_TEXT,
-				data: ""
-			},
+			currentTabId,
+			message,
 			handleContentScriptResponse
 		);
 	});

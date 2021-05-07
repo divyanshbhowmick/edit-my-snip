@@ -2,7 +2,7 @@ import React from "react";
 import "./LanguageSelector.css";
 import { languagesSupported } from "./../../config/languageConfig";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { removeContainer } from "./../../helpers/contentScriptHelper";
+import { removeContainer } from "../../utils/helpers/contentScriptHelper";
 import { faTimes } from "@fortawesome/free-solid-svg-icons";
 
 interface LanguageSelectorProps {

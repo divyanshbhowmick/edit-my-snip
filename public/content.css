@@ -4,14 +4,7 @@
 	font-weight: 400;
 	src: url("chrome-extension://__MSG_@@extension_id__/fonts/EuclidCircularA-Regular.ttf");
 }
-@font-face {
-	font-family: "Nunito";
-	font-style: normal;
-	font-weight: 300;
-	font-display: swap;
-	src: url("chrome-extension://__MSG_@@extension_id__/fonts/Nunito.woff")
-		format("woff");
-}
+
 .card__container {
 	display: flex;
 	flex-direction: column;

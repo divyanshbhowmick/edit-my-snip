@@ -1,9 +1,8 @@
 import React from "react";
 import LanguageSelectComponent from "../components/LanguageSelector/LanguageSelector";
-import { unmountComponentAtNode } from "react-dom";
-import { removeContainer } from "./../helpers/contentScriptHelper";
-import { domContainerID } from "./../helpers/constants";
+import { removeContainer } from "../utils/helpers/contentScriptHelper";
 import { Languages } from "../config/languageConfig";
+import { IAction, IContentScriptResponse } from "../@types/config";
 
 interface ContentViewProps {
 	sendResponse: Function;
@@ -14,9 +13,10 @@ const ContentView: React.FC<ContentViewProps> = ({
 	selectedText
 }) => {
 	const setLanguage = (language: Languages) => {
-		sendResponse({
+		const response: IContentScriptResponse = {
 			data: { code: selectedText, language }
-		});
+		};
+		sendResponse(response);
 		removeContainer(document.body);
 	};
 	return <LanguageSelectComponent setLanguage={setLanguage} />;

@@ -1,11 +1,14 @@
 import React from "react";
 import { render } from "react-dom";
 import App from "./../App";
-import { domContainerID, FETCH_SELECTION_TEXT } from "../helpers/constants";
+import {
+	DOM_CONTAINER_ID,
+	FETCH_SELECTION_TEXT
+} from "../utils/helpers/constants";
 import {
 	createContainerToRender,
 	getParentElement
-} from "./../helpers/contentScriptHelper";
+} from "../utils/helpers/contentScriptHelper";
 
 const messageListener = (req, sender, sendResp) => {
 	if (req?.action == FETCH_SELECTION_TEXT) {
@@ -13,7 +16,7 @@ const messageListener = (req, sender, sendResp) => {
 		createContainerToRender(getParentElement());
 		render(
 			<App sendResponse={sendResp} selectedText={selectedText} />,
-			document.getElementById(domContainerID)
+			document.getElementById(DOM_CONTAINER_ID)
 		);
 		return true;
 	}
