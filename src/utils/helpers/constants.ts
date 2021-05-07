@@ -87,5 +87,9 @@ export const JS_KEYWORDS: Array<string> = [
 	"void",
 	"while",
 	"with",
-	"yield"
+	"yield",
+	"Map",
+	"set",
+	"console",
+	"log"
 ];
