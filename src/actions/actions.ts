@@ -1,7 +1,6 @@
-import { IAction } from "../@types/config";
-import { FETCH_SELECTION_TEXT } from "../utils/helpers/constants";
+import { IAction, IData } from "../@types/config";
 
-export const notifyContentScriptData = (data): IAction => ({
-	action: FETCH_SELECTION_TEXT,
+export const generateMessageData = (action: string, data: IData): IAction => ({
+	action,
 	data
 });

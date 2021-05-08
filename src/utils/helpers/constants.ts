@@ -8,6 +8,8 @@ export const CONTEXT_MENU_CONTEXTS: Array<string> = ["selection"];
 
 export const FETCH_SELECTION_TEXT: string = "FETCH_SELECTION_TEXT";
 
+export const SHOW_ALERT_MESSAGE: string = "SHOW_ALERT_MESSAGE";
+
 export const DOM_CONTAINER_ID: string = "editMySnipLanguageSelector";
 
 export const REACT_IMPORTS: IReactImports = {

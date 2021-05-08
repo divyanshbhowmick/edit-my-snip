@@ -1,47 +1,31 @@
-import React, { useEffect } from "react";
+import React, { useContext } from "react";
 import "./LanguageSelector.css";
 import { languagesSupported } from "./../../config/languageConfig";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { removeContainer } from "../../utils/helpers/contentScriptHelper";
-import { faTimes } from "@fortawesome/free-solid-svg-icons";
+import Card from "./../Card/Card";
+import { removeContainer } from "./../../utils/helpers/contentScriptHelper";
+import { IContentScriptResponse } from "../../@types/config";
+import { IMessageContextType } from "../../@types/context";
+import { MessageContext } from "./../../contexts/MessageContext";
 
-interface LanguageSelectorProps {
-	setLanguage: Function;
-}
-const LanguageSelector: React.FC<LanguageSelectorProps> = ({ setLanguage }) => {
+interface LanguageSelectorProps {}
+const LanguageSelector: React.FC<LanguageSelectorProps> = ({}) => {
+	const messageContext: IMessageContextType = useContext(MessageContext);
+
 	const handleLanguageSelect = (
 		event: React.ChangeEvent<HTMLSelectElement>
 	) => {
-		setLanguage(+event.target.value);
-	};
-
-	const handleClose = () => {
+		const response: IContentScriptResponse = {
+			data: {
+				code: messageContext.selectedText,
+				language: +event.target.value
+			}
+		};
+		messageContext.sendResponse(response);
 		removeContainer(document.body);
 	};
 
-	const handleKeyPress = (event: KeyboardEvent) => {
-		if (event.key === "Escape") {
-			handleClose();
-		}
-	};
-
-	useEffect(() => {
-		document.addEventListener("keydown", handleKeyPress);
-		return () => {
-			document.removeEventListener("keydown", handleKeyPress);
-		};
-	});
-
 	return (
-		<div className="card__container">
-			<FontAwesomeIcon
-				className="card__close__icon"
-				icon={faTimes}
-				onClick={handleClose}
-			/>
-			<div className="card__header">
-				<div className="card__header__title">Edit(✏) My Snip(👩‍💻)</div>
-			</div>
+		<Card>
 			<select className="selectbox" onChange={handleLanguageSelect}>
 				<option value="vanillaJS" className="selectbox__option">
 					Choose the language
@@ -56,7 +40,7 @@ const LanguageSelector: React.FC<LanguageSelectorProps> = ({ setLanguage }) => {
 					</option>
 				))}
 			</select>
-		</div>
+		</Card>
 	);
 };
 export default LanguageSelector;

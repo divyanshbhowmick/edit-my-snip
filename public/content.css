@@ -5,6 +5,79 @@
 	src: url("chrome-extension://__MSG_@@extension_id__/fonts/EuclidCircularA-Regular.ttf");
 }
 
+@keyframes popup {
+	0% {
+		opacity: 0;
+		transform: scale(0);
+	}
+
+	100% {
+		opacity: 1;
+		transform: scale(1);
+	}
+}
+
+.selectbox {
+	box-shadow: 0 5px 10px rgba(154, 160, 185, 0.05),
+		0 15px 40px rgba(166, 173, 201, 0.2);
+	cursor: pointer;
+	outline: none;
+	width: 170px;
+	height: fit-content;
+	margin-top: 30px;
+	font-family: "euclidCircularA", "Nunito", sans-serif;
+	font-size: 14px;
+	border-radius: 30px;
+}
+
+.selectbox__option {
+	font-family: "euclidCircularA", "Nunito", sans-serif;
+	font-size: 14px;
+	background-color: #fff;
+}
+
+.alert_box__container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-between;
+	width: 200px;
+	height: fit-content;
+	margin-top: 30px;
+	font-family: "euclidCircularA", "Nunito", sans-serif;
+	font-size: 12px;
+}
+.alert_box__message {
+	all: unset;
+	font-family: "euclidCircularA", "Nunito", sans-serif;
+	font-size: 12px !important;
+	text-align: center;
+	margin-bottom: 12px;
+}
+.alert_box__btn_container {
+	display: flex;
+}
+
+.alert_box__btn {
+	border-radius: 30px;
+	padding: 5px;
+	width: 65px;
+	height: 30px;
+	margin-right: 10px;
+	cursor: pointer;
+	outline: none;
+}
+
+.success_btn {
+	border: 2px solid #00ab66;
+	color: #00ab66;
+}
+
+.danger_btn {
+	border: 2px solid #dc3545;
+	color: #dc3545;
+}
+
 .card__container {
 	display: flex;
 	flex-direction: column;
@@ -33,34 +106,4 @@
 .card__header__title {
 	font-family: "euclidCircularA", "Nunito", sans-serif;
 	font-size: 16px;
-}
-.selectbox {
-	box-shadow: 0 5px 10px rgba(154, 160, 185, 0.05),
-		0 15px 40px rgba(166, 173, 201, 0.2);
-	cursor: pointer;
-	outline: none;
-	width: 170px;
-	height: fit-content;
-	margin-top: 30px;
-	font-family: "euclidCircularA", "Nunito", sans-serif;
-	font-size: 14px;
-	border-radius: 30px;
-}
-
-.selectbox__option {
-	font-family: "euclidCircularA", "Nunito", sans-serif;
-	font-size: 14px;
-	background-color: #fff;
-}
-
-@keyframes popup {
-	0% {
-		opacity: 0;
-		transform: scale(0);
-	}
-
-	100% {
-		opacity: 1;
-		transform: scale(1);
-	}
 }

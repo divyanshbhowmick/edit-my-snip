@@ -1,0 +1,41 @@
+.alert_box__container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-between;
+	width: 200px;
+	height: fit-content;
+	margin-top: 30px;
+	font-family: "euclidCircularA", "Nunito", sans-serif;
+	font-size: 12px;
+}
+.alert_box__message {
+	all: unset;
+	font-family: "euclidCircularA", "Nunito", sans-serif;
+	font-size: 12px !important;
+	text-align: center;
+	margin-bottom: 12px;
+}
+.alert_box__btn_container {
+	display: flex;
+}
+
+.alert_box__btn {
+	border-radius: 30px;
+	padding: 5px;
+	width: 65px;
+	height: 30px;
+	margin-right: 10px;
+	cursor: pointer;
+	outline: none;
+}
+
+.success_btn {
+	border: 2px solid #00ab66;
+	color: #00ab66;
+}
+
+.danger_btn {
+	border: 2px solid #dc3545;
+	color: #dc3545;
+}

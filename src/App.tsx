@@ -1,13 +1,9 @@
 import React from "react";
 import ContentView from "./views/ContentView";
+import "./App.css";
 
-interface AppProps {
-	sendResponse: Function;
-	selectedText: string;
-}
-const App: React.FC<AppProps> = ({ sendResponse, selectedText }) => {
-	return (
-		<ContentView sendResponse={sendResponse} selectedText={selectedText} />
-	);
+interface AppProps {}
+const App: React.FC<AppProps> = () => {
+	return <ContentView />;
 };
 export default App;
