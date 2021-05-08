@@ -9,20 +9,18 @@
 		"16": "./assets/icons/icon16.png"
 	},
 	"background": {
-		"scripts": ["background.js"]
+		"scripts": ["js/background.js"]
 	},
 	"content_scripts": [
 		{
 			"matches": ["http://*/*", "https://*/*"],
-			"js": ["content.js"],
-			"css": ["content.css"]
+			"js": ["js/content.js"],
+			"css": ["css/content.css"]
 		}
 	],
 	"web_accessible_resources": [
-		"content.css",
-		"fonts/EuclidCircularA-Regular.ttf",
-		"fonts/*.woff2",
-		"fonts/*.woff"
+		"css/content.css",
+		"fonts/EuclidCircularA-Regular.ttf"
 	],
 	"permissions": ["contextMenus", "tabs"]
 }

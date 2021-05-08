@@ -10,14 +10,14 @@ const environment = process.env.NODE_ENV;
 const BUNDLE_1 = {
 	input: "src/chrome/background.ts",
 	output: {
-		file: "public/background.js",
+		file: "dist/background.js",
 		sourcemap: environment !== "production" ? "inline" : false
 	}
 };
 const BUNDLE_2 = {
 	input: "src/chrome/content.tsx",
 	output: {
-		file: "public/content.js",
+		file: "dist/content.js",
 		sourcemap: environment !== "production" ? "inline" : false
 	}
 };

@@ -5,7 +5,8 @@
 	"main": "index.js",
 	"scripts": {
 		"build": "rollup -c",
-		"dev": "rollup -cw"
+		"dev": "rollup -cw",
+		"build:extension": "node scripts/build.js"
 	},
 	"keywords": [],
 	"author": "",
@@ -24,6 +25,7 @@
 		"eslint-plugin-prettier": "^3.4.0",
 		"eslint-plugin-react": "^7.21.5",
 		"prettier": "^2.2.1",
+		"rimraf": "^3.0.2",
 		"rollup": "^2.45.2",
 		"rollup-plugin-copy": "^3.4.0",
 		"rollup-plugin-terser": "^7.0.2",
