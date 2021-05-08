@@ -1,6 +1,7 @@
 import { getParameters } from "codesandbox/lib/api/define";
 import { IEditorConfig } from "../../../@types/config";
 import { Languages } from "../../../config/languageConfig";
+import { REACT_INDEX_JS_CONTENT } from "../constants";
 
 const generateConfig = (editorConfig: IEditorConfig) => {
 	const { language, content } = editorConfig;
@@ -19,7 +20,14 @@ const generateConfig = (editorConfig: IEditorConfig) => {
 				...baseConfig,
 				files: {
 					...baseConfig.files,
-					"index.js": { ...baseConfig.files["index.js"], content },
+					"src/App.js": {
+						...baseConfig.files["index.js"],
+						content
+					},
+					"index.js": {
+						...baseConfig.files["index.js"],
+						content: REACT_INDEX_JS_CONTENT
+					},
 					"package.json": {
 						...baseConfig.files["index.js"],
 						content: JSON.stringify({

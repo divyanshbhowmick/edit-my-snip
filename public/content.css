@@ -17,6 +17,25 @@
 	}
 }
 
+.selectbox {
+	box-shadow: 0 5px 10px rgba(154, 160, 185, 0.05),
+		0 15px 40px rgba(166, 173, 201, 0.2);
+	cursor: pointer;
+	outline: none;
+	width: 170px;
+	height: fit-content;
+	margin-top: 30px;
+	font-family: "euclidCircularA", "Nunito", sans-serif;
+	font-size: 14px;
+	border-radius: 30px;
+}
+
+.selectbox__option {
+	font-family: "euclidCircularA", "Nunito", sans-serif;
+	font-size: 14px;
+	background-color: #fff;
+}
+
 .alert_box__container {
 	display: flex;
 	flex-direction: column;
@@ -57,25 +76,6 @@
 .danger_btn {
 	border: 2px solid #dc3545;
 	color: #dc3545;
-}
-
-.selectbox {
-	box-shadow: 0 5px 10px rgba(154, 160, 185, 0.05),
-		0 15px 40px rgba(166, 173, 201, 0.2);
-	cursor: pointer;
-	outline: none;
-	width: 170px;
-	height: fit-content;
-	margin-top: 30px;
-	font-family: "euclidCircularA", "Nunito", sans-serif;
-	font-size: 14px;
-	border-radius: 30px;
-}
-
-.selectbox__option {
-	font-family: "euclidCircularA", "Nunito", sans-serif;
-	font-size: 14px;
-	background-color: #fff;
 }
 
 .card__container {

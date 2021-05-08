@@ -105,3 +105,8 @@ export const REACT_KEYWORDS: Array<string> = [
 	"componentWillMount",
 	"ReactDOM"
 ];
+
+const DEFAULT_MARKUP_REACT = `<div><h1>Edit(✏) My Snip(👩‍💻)</h1><h2>Please, edit your snippet in App.js!</h2></div>`;
+
+export const REACT_INDEX_JS_CONTENT = `import React from 'react';\nimport { render } from 'react-dom';\nimport App from './src/App';
+\nconst TestComponent = () =>(${DEFAULT_MARKUP_REACT});\n// Uncomment the below line to render the App component\n// render(<App />, document.getElementById("root"));\nrender(<TestComponent />, document.getElementById('root'));`;
