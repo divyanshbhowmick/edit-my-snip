@@ -95,3 +95,13 @@ export const JS_KEYWORDS: Array<string> = [
 	"console",
 	"log"
 ];
+export const REACT_KEYWORDS: Array<string> = [
+	"React",
+	"Component",
+	"render",
+	"props",
+	"state",
+	"componentDidMount",
+	"componentWillMount",
+	"ReactDOM"
+];

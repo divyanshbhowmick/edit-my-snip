@@ -11,11 +11,11 @@ interface CardProps {
 const Card: React.FC<CardProps> = (props) => {
 	const handleKeyPress = (event: KeyboardEvent) => {
 		if (event.key === "Escape") {
-			if (props?.handleClose) props.handleClose();
-			else handleNativeClose();
+			handleNativeClose();
 		}
 	};
 	const handleNativeClose = () => {
+		if (typeof props.handleClose == "function") props.handleClose();
 		removeContainer(document.body);
 	};
 	useEffect(() => {
@@ -30,9 +30,7 @@ const Card: React.FC<CardProps> = (props) => {
 			<FontAwesomeIcon
 				className="card__close__icon"
 				icon={faTimes}
-				onClick={
-					props.handleClose ? props.handleClose : handleNativeClose
-				}
+				onClick={handleNativeClose}
 			/>
 			<div className="card__header">
 				<div className="card__header__title">Edit(✏) My Snip(👩‍💻)</div>

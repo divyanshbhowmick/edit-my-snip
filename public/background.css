@@ -48,8 +48,11 @@
 	font-size: 12px;
 }
 .alert_box__message {
+	all: unset;
 	font-family: "euclidCircularA", "Nunito", sans-serif;
-	font-size: 12px;
+	font-size: 12px !important;
+	text-align: center;
+	margin-bottom: 12px;
 }
 .alert_box__btn_container {
 	display: flex;
@@ -58,6 +61,11 @@
 .alert_box__btn {
 	border-radius: 30px;
 	padding: 5px;
+	width: 65px;
+	height: 30px;
+	margin-right: 10px;
+	cursor: pointer;
+	outline: none;
 }
 
 .success_btn {

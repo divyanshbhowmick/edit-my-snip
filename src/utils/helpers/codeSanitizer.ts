@@ -1,11 +1,12 @@
 import { IEditorConfig } from "../../@types/config";
 import { Languages } from "../../config/languageConfig";
-import { JS_KEYWORDS, REACT_IMPORTS } from "./constants";
+import { JS_KEYWORDS, REACT_IMPORTS, REACT_KEYWORDS } from "./constants";
 
 export const isCodeSnippet = (code: string) => {
 	// Check for basic keywords and syntax
 	let count = 0;
-	JS_KEYWORDS.map((keyword: string) => {
+	const KEYWORDS_LIST = [...JS_KEYWORDS, ...REACT_KEYWORDS];
+	KEYWORDS_LIST.map((keyword: string) => {
 		if (code.includes(keyword)) {
 			count++;
 		}
