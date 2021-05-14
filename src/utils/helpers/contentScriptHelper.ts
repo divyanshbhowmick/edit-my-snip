@@ -25,27 +25,10 @@ export const createContainerToRender = (parentElement: HTMLElement) => {
 	containerElement.id = DOM_CONTAINER_ID;
 	containerElement.style.position = `fixed`;
 
-	console.log("ParentTop", top);
-	console.log("ParentLeft", left);
-
 	containerElement.style.top = `${top}px`;
 	containerElement.style.left = `${left}px`;
 	containerElement.style.zIndex = `100000000`;
 
-	console.log("ParentTop", containerElement.style.top);
-	console.log("ParentLeft", containerElement.style.left);
-
-	// console.log("offsetLeft", parentElement.offsetLeft);
-	// console.log("offsetTop", parentElement.offsetTop);
-	// console.log("offsetWidth", parentElement.offsetWidth);
-	// console.log("offsetHeight", parentElement.offsetHeight);
-	// console.log("ContainerTop", parentElement.offsetTop);
-	// console.log(
-	// 	"ContainerLeft",
-	// 	parentElement.offsetWidth + parentElement.offsetLeft
-	// );
-
-	console.log(parentElement.getBoundingClientRect());
 	document.body.appendChild(containerElement);
 
 	// parentElement.insertAdjacentElement("afterbegin", containerElement);

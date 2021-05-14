@@ -45,7 +45,6 @@ export const notifyContentScript = (
 ) => {
 	chrome.tabs.query({ active: true, currentWindow: true }, function (tabs) {
 		const currentTabId: number = tabs[0].id;
-		console.log("Messagees", message);
 		chrome.tabs.sendMessage(currentTabId, message, responseCallBack);
 	});
 };

@@ -25,15 +25,18 @@
 	width: 170px;
 	height: fit-content;
 	margin-top: 30px;
-	font-family: "euclidCircularA", "Nunito", sans-serif;
-	font-size: 14px;
+	font-family: "euclidCircularA", sans-serif;
+	font-size: 14px !important;
 	border-radius: 30px;
+	background-color: white !important;
+	color: #24292e !important;
 }
 
 .selectbox__option {
 	font-family: "euclidCircularA", "Nunito", sans-serif;
 	font-size: 14px;
 	background-color: #fff;
+	color: #24292e !important;
 }
 
 .alert_box__container {
@@ -44,15 +47,16 @@
 	width: 200px;
 	height: fit-content;
 	margin-top: 30px;
-	font-family: "euclidCircularA", "Nunito", sans-serif;
+	font-family: "euclidCircularA", sans-serif;
 	font-size: 12px;
 }
 .alert_box__message {
 	all: unset;
-	font-family: "euclidCircularA", "Nunito", sans-serif;
+	font-family: "euclidCircularA", sans-serif;
 	font-size: 12px !important;
 	text-align: center;
 	margin-bottom: 12px;
+	color: #24292e !important;
 }
 .alert_box__btn_container {
 	display: flex;
@@ -66,6 +70,7 @@
 	margin-right: 10px;
 	cursor: pointer;
 	outline: none;
+	background-color: white !important;
 }
 
 .success_btn {
@@ -101,9 +106,11 @@
 	align-self: flex-end;
 	cursor: pointer;
 	text-shadow: 10px 10px 10px gray;
+	color: #24292e !important;
 }
 
 .card__header__title {
-	font-family: "euclidCircularA", "Nunito", sans-serif;
-	font-size: 16px;
+	font-family: "euclidCircularA", sans-serif;
+	font-size: 16px !important;
+	color: #24292e !important;
 }

@@ -21,9 +21,11 @@
 	align-self: flex-end;
 	cursor: pointer;
 	text-shadow: 10px 10px 10px gray;
+	color: #24292e !important;
 }
 
 .card__header__title {
-	font-family: "euclidCircularA", "Nunito", sans-serif;
-	font-size: 16px;
+	font-family: "euclidCircularA", sans-serif;
+	font-size: 16px !important;
+	color: #24292e !important;
 }

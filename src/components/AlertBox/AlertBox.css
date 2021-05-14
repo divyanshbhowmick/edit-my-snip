@@ -6,15 +6,16 @@
 	width: 200px;
 	height: fit-content;
 	margin-top: 30px;
-	font-family: "euclidCircularA", "Nunito", sans-serif;
+	font-family: "euclidCircularA", sans-serif;
 	font-size: 12px;
 }
 .alert_box__message {
 	all: unset;
-	font-family: "euclidCircularA", "Nunito", sans-serif;
+	font-family: "euclidCircularA", sans-serif;
 	font-size: 12px !important;
 	text-align: center;
 	margin-bottom: 12px;
+	color: #24292e !important;
 }
 .alert_box__btn_container {
 	display: flex;
@@ -28,6 +29,7 @@
 	margin-right: 10px;
 	cursor: pointer;
 	outline: none;
+	background-color: white !important;
 }
 
 .success_btn {
