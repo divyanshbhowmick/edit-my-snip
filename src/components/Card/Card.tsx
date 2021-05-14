@@ -33,7 +33,7 @@ const Card: React.FC<CardProps> = (props) => {
 				onClick={handleNativeClose}
 			/>
 			<div className="card__header">
-				<div className="card__header__title">Edit(✏) My Snip(👩‍💻)</div>
+				<div className="card__header__title">Edit(📝) My Snip(👩‍💻)</div>
 			</div>
 			<div className="card__body">{props.children}</div>
 		</div>
