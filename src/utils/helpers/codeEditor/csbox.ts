@@ -66,10 +66,6 @@ const getBaseConfig = () => {
 			"index.js": {
 				content: "",
 				isBinary: false
-			},
-			"package.json": {
-				content: JSON.stringify({ dependencies: {} }),
-				isBinary: false
 			}
 		}
 	};
